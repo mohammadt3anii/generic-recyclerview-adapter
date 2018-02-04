@@ -86,4 +86,4 @@ public class MainActivity extends BaseActivity implements OnRecyclerObjectClickL
 
 ### That's it, let me know if you have any trouble or if there is any issue at 
 
-## *achmadnayfalsyafiq@gmail.com*
+## *achmadnaufalsyafiq@gmail.com*
