@@ -75,12 +75,25 @@ public class UserViewHolder extends BaseViewHolder<Model, OnRecyclerObjectClickL
 public class MainActivity extends BaseActivity implements OnRecyclerObjectClickListener<UserModel> {
   @Override
     protected void onCreate(Bundle savedInstanceState) {
- RecyclerView mRv = findViewById(R.id.rvUsers);
+	RecyclerView mRv = findViewById(R.id.rvUsers);
         SampleAdapter adapter = new UserAdapter(this);
         adapter.setListener(this);
         mRv.setLayoutManager(new LinearLayoutManager(this));
         mRv.setAdapter(adapter);
         adapter.setItems(users);
+	
+    }
+    
+    /**
+     * Handle click from recyclerview
+     * @param item
+     */
+
+    @Override
+    public void onItemClicked(UserModel item) {
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+    }
+
 }
 ```
 
